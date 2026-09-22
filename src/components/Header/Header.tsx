@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -77,10 +77,6 @@ export default function Header() {
           </ul>
         </nav>
 
-        <a href="tel:+911234567890" className={`${styles.ctaBtn} btn btn-primary`}>
-          Book Appointment
-        </a>
-
         <button
           className={styles.hamburger}
           onClick={() => setMenuOpen(!menuOpen)}
@@ -112,15 +108,7 @@ export default function Header() {
               </a>
             </li>
           ))}
-          <li className={styles.mobileCTAItem}>
-            <a
-              href="tel:+911234567890"
-              className={`${styles.mobileCta} btn btn-primary`}
-              onClick={closeMenu}
-            >
-              Book Appointment
-            </a>
-          </li>
+
         </ul>
       </nav>
     </header>

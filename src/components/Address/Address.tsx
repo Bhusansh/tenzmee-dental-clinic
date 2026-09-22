@@ -1,4 +1,4 @@
-﻿import styles from "./Address.module.css";
+import styles from "./Address.module.css";
 
 export default function Address() {
   return (
@@ -45,10 +45,6 @@ export default function Address() {
                 </div>
               </li>
             </ul>
-
-            <a href="tel:+911234567890" className="btn btn-primary">
-              Book an Appointment
-            </a>
           </div>
 
           {/* Map Placeholder */}

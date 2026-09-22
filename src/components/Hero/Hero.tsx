@@ -17,8 +17,8 @@ export default function Hero() {
             Comprehensive dental care for the whole family — gentle, modern, and trusted. We combine the latest technology with a warm, patient-first approach.
           </p>
           <div className={styles.actions}>
-            <a href="tel:+911234567890" className="btn btn-primary">
-              Book Appointment
+            <a href="/contact" className="btn btn-primary">
+              Contact
             </a>
             <a href="/#services" className={`btn btn-outline ${styles.learnMore}`}
               onClick={(e) => {

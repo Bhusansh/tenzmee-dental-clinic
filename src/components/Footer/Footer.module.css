@@ -1,6 +1,7 @@
-﻿.footer {
-  background-color: var(--bg-dark);
-  color: #e5e7eb;
+.footer {
+  background-color: var(--bg);
+  color: var(--text-body);
+  border-top: 1px solid var(--border);
 }
 
 .inner {
@@ -38,14 +39,14 @@
 .logoDental {
   font-size: 0.6875rem;
   font-weight: 500;
-  color: #9ca3af;
+  color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 
 .brandDesc {
   font-size: 0.875rem;
-  color: #9ca3af;
+  color: var(--text-muted);
   line-height: 1.7;
   max-width: 280px;
 }
@@ -55,8 +56,9 @@
 }
 
 .contact a {
-  color: #d1d5db;
+  color: var(--text-dark);
   transition: color var(--transition);
+  font-weight: 500;
 }
 
 .contact a:hover {
@@ -73,7 +75,7 @@
 .colTitle {
   font-size: 0.8125rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text-dark);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: var(--space-1);
@@ -87,7 +89,7 @@
 
 .colLink {
   font-size: 0.875rem;
-  color: #9ca3af;
+  color: var(--text-muted);
   transition: color var(--transition);
 }
 
@@ -106,9 +108,9 @@
   display: flex;
   justify-content: space-between;
   font-size: 0.875rem;
-  color: #9ca3af;
+  color: var(--text-muted);
   padding-bottom: var(--space-3);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid var(--border-light);
 }
 
 .hoursItem:last-child {
@@ -122,7 +124,7 @@
 /* Bottom */
 .bottom {
   padding-top: var(--space-6);
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid var(--border-light);
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
@@ -130,12 +132,12 @@
 
 .copyright {
   font-size: 0.8125rem;
-  color: #6b7280;
+  color: var(--text-muted);
 }
 
 .disclaimer {
   font-size: 0.75rem;
-  color: #4b5563;
+  color: var(--text-light);
 }
 
 @media (min-width: 600px) {
