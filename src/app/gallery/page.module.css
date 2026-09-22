@@ -1,0 +1,237 @@
+﻿.pageHero {
+  background-color: var(--primary-light);
+  border-bottom: 1px solid var(--border);
+  padding-top: calc(64px + var(--space-12));
+  padding-bottom: var(--space-10);
+}
+
+.heroTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: var(--space-3);
+  letter-spacing: -0.02em;
+}
+
+.heroSub {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 520px;
+  line-height: 1.7;
+  margin-bottom: var(--space-6);
+}
+
+.heroActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.photoCount {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.gallerySection {
+  background-color: var(--bg-white);
+  position: relative;
+  min-height: 400px;
+}
+
+.dropOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropOverlayInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-8);
+  border: 2px dashed var(--primary);
+  border-radius: var(--radius-lg);
+  background-color: var(--primary-light);
+}
+
+.dropOverlayInner p {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: var(--space-4);
+}
+
+.cell {
+  aspect-ratio: 1;
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.imageWrap:hover .image {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.imageWrap:hover .imageOverlay {
+  opacity: 1;
+}
+
+.removeBtn {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition), background-color var(--transition);
+}
+
+.imageWrap:hover .removeBtn {
+  opacity: 1;
+}
+
+.removeBtn:hover {
+  background-color: var(--accent);
+}
+
+.imageName {
+  position: absolute;
+  bottom: var(--space-2);
+  left: var(--space-3);
+  right: var(--space-3);
+  font-size: 0.75rem;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0;
+  transition: opacity var(--transition);
+  font-weight: 500;
+}
+
+.imageWrap:hover .imageName {
+  opacity: 1;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  background-color: var(--bg);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition), border-color var(--transition);
+}
+
+.placeholder:hover {
+  background-color: var(--primary-light);
+  border-color: var(--primary);
+}
+
+.placeholderLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.placeholderHint {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.uploadStrip {
+  margin-top: var(--space-12);
+  padding: var(--space-6);
+  background-color: var(--bg);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  align-items: center;
+  text-align: center;
+}
+
+.uploadStripTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: var(--space-1);
+}
+
+.uploadStripSub {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--space-5);
+  }
+
+  .uploadStrip {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: var(--space-6) var(--space-8);
+  }
+}
+
+@media (min-width: 900px) {
+  .pageHero {
+    padding-top: calc(72px + var(--space-16));
+  }
+
+  .heroTitle {
+    font-size: 2.75rem;
+  }
+}

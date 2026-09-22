@@ -1,0 +1,199 @@
+﻿.pageHero {
+  background-color: var(--primary-light);
+  border-bottom: 1px solid var(--border);
+  padding-top: calc(64px + var(--space-12));
+  padding-bottom: var(--space-10);
+}
+
+.heroTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: var(--space-3);
+  letter-spacing: -0.02em;
+}
+
+.heroSub {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 520px;
+  line-height: 1.7;
+  margin-bottom: var(--space-6);
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+}
+
+.breadLink {
+  color: var(--primary);
+  font-weight: 500;
+  transition: color var(--transition);
+}
+
+.breadLink:hover {
+  color: var(--primary-dark);
+}
+
+.breadSep {
+  color: var(--text-muted);
+}
+
+.breadCurrent {
+  color: var(--text-muted);
+}
+
+/* Form Section */
+.formSection {
+  background-color: var(--bg-white);
+  padding-bottom: 0; /* Let the next section provide spacing */
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+.formPanel {
+  flex: 1.5;
+  min-width: 0;
+}
+
+.formTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: var(--space-3);
+}
+
+.formDesc {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-8);
+  line-height: 1.6;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: var(--text-body);
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition), box-shadow var(--transition);
+  font-family: inherit;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(26, 140, 204, 0.15);
+  background-color: var(--bg-white);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Side Panel */
+.sidePanel {
+  flex: 1;
+  min-width: 0;
+}
+
+.emergencyCard {
+  background-color: var(--accent);
+  color: #fff;
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+  box-shadow: var(--shadow-md);
+}
+
+.emergencyTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.emergencyText {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.emergencyCall {
+  background-color: #fff;
+  color: var(--accent);
+  font-weight: 700;
+  padding: 0.6rem 1.25rem;
+}
+
+.emergencyCall:hover {
+  background-color: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (min-width: 768px) {
+  .pageHero {
+    padding-top: calc(72px + var(--space-16));
+  }
+
+  .heroTitle {
+    font-size: 2.75rem;
+  }
+  
+  .formGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-16);
+  }
+  
+  .sidePanel {
+    position: sticky;
+    top: 100px;
+  }
+}

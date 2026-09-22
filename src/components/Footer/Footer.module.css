@@ -1,0 +1,157 @@
+﻿.footer {
+  background-color: var(--bg-dark);
+  color: #e5e7eb;
+}
+
+.inner {
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-8);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  margin-bottom: var(--space-10);
+}
+
+/* Brand */
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.logoName {
+  font-size: 1.0625rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.logoDental {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.brandDesc {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  line-height: 1.7;
+  max-width: 280px;
+}
+
+.contact {
+  font-size: 0.875rem;
+}
+
+.contact a {
+  color: #d1d5db;
+  transition: color var(--transition);
+}
+
+.contact a:hover {
+  color: var(--primary);
+}
+
+/* Columns */
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.colTitle {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-1);
+}
+
+.colList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.colLink {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  transition: color var(--transition);
+}
+
+.colLink:hover {
+  color: var(--primary);
+}
+
+/* Hours */
+.hoursList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.hoursItem {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #9ca3af;
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.hoursItem:last-child {
+  border-bottom: none;
+}
+
+.closedText {
+  color: var(--accent);
+}
+
+/* Bottom */
+.bottom {
+  padding-top: var(--space-6);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.copyright {
+  font-size: 0.8125rem;
+  color: #6b7280;
+}
+
+.disclaimer {
+  font-size: 0.75rem;
+  color: #4b5563;
+}
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  }
+
+  .bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
